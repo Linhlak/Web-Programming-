@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!-- 
+    DOCTYPE declaration defines the document type and HTML version.
+    HTML5 uses a simple <!DOCTYPE html> declaration.
+-->
+
+<html lang="en">
+    
+
+<!-- 
+    The <html> tag is the root element that wraps all content.
+    'lang' attribute specifies the language of the document.
+    <p lang="fr">Ceci est un paragraphe.</p>
+    <p lang="hi">Ceci est un paragraphe.</p>
+-->
+
+<head>
+    <!-- 
+        The <head> section contains metadata about the document.
+        This information is not displayed on the page but is used by browsers and search engines.
+    -->
+    
+    <meta charset="UTF-8">
+    <!-- 
+        <meta charset> specifies the character encoding for the document.
+        UTF-8 supports all characters and symbols.
+    -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+        This meta tag makes the webpage responsive on different devices.
+    -->
+    
+    <title>HTML Formatting Elements - Question 1</title>
+    <!-- 
+        The <title> tag defines the title shown in the browser tab.
+        It's also used by search engines and when bookmarking the page.
+    -->
+</head>
+
+<body style="background-color: #f0f8ff; font-family: Arial, sans-serif; padding: 20px;">
+    <!-- 
+        The <body> tag contains all visible content of the webpage.
+        'style' attribute applies inline CSS:
+        - background-color: Sets the background color of the page
+        - font-family: Sets the default font for the page
+        - padding: Adds space around the content
+    -->
+
+    <!-- ========== HEADINGS ========== -->
+    <!-- 
+        HTML provides 6 levels of headings from <h1> to <h6>.
+        <h1> is the most important (largest), <h6> is the least important (smallest).
+        Used for document structure and SEO.
+    -->
+    <h1 style="color: #2c3e50; text-align: center;">HTML Formatting Elements Demo</h1>
+    <h2 style="color: #34495e;">1. Headings Example</h2>
+    <h3>This is Heading 3</h3>
+    <h4>This is Heading 4</h4>
+    <h5>This is Heading 5</h5>
+    <h6>This is Heading 6</h6>
+
+    <hr>
+    <!-- 
+        The <hr> tag creates a horizontal line (thematic break).
+        Used to separate content sections.
+    -->
+
+    <!-- ========== TEXT FORMATTING ========== -->
+    <h2 style="color: #34495e;">2. Text Formatting</h2>
+
+    <!-- Bold Text -->
+    <p>
+        <!-- 
+            The <p> tag defines a paragraph.
+            It automatically adds space before and after the content.
+        -->
+        <b>This text is bold using &lt;b&gt; tag.</b>
+        <!-- 
+            The <b> tag makes text bold without adding semantic importance.
+        -->
+        <br>
+        <!-- 
+            The <br> tag creates a line break.
+            It's a self-closing tag (doesn't need a closing tag).
+        -->
+        <strong>This text is bold using &lt;strong&gt; tag (semantically important).</strong>
+        <!-- 
+            The <strong> tag makes text bold AND indicates importance.
+            Screen readers emphasize <strong> text.
+        -->
+    </p>
+
+    <!-- Italic Text -->
+    <p>
+        <i>This text is italic using &lt;i&gt; tag.</i>
+        <!-- 
+            The <i> tag makes text italic without semantic meaning.
+        -->
+        <br>
+        <em>This text is italic using &lt;em&gt; tag (emphasized).</em>
+        <!-- 
+            The <em> tag makes text italic AND indicates emphasis.
+        -->
+    </p>
+
+    <!-- Underlined Text -->
+    <p>
+        <u>This text is underlined using &lt;u&gt; tag.</u>
+        <!-- 
+            The <u> tag underlines text.
+            Note: Underlined text can be confused with links, so use sparingly.
+        -->
+    </p>
+
+    <!-- Combined Formatting -->
+    <p>
+        <b><i><u>This text combines Bold, Italic, and Underline!</u></i></b>
+        <!-- 
+            Tags can be nested to combine multiple formatting styles.
+            Always close tags in the reverse order they were opened.
+        -->
+    </p>
+
+    <hr>
+
+    <!-- ========== COLORS ========== -->
+    <h2 style="color: #34495e;">3. Text Colors</h2>
+
+    <p style="color: red;">This text is RED (using color name).</p>
+    <!-- 
+        Colors can be applied using the 'style' attribute with 'color' property.
+        Color names like 'red', 'blue', 'green' can be used.
+    -->
+
+    <p style="color: #0000ff;">This text is BLUE (using hex code #0000ff).</p>
+    <!-- 
+        Hex color codes provide more color options.
+        Format: #RRGGBB where RR=Red, GG=Green, BB=Blue
+    -->
+
+    <p style="color: rgb(0, 128, 0);">This text is GREEN (using RGB values).</p>
+    <!-- 
+        RGB format: rgb(red, green, blue)
+        Values range from 0 to 255
+    -->
+
+    <p style="color: #ff6600; font-size: 20px;">This is ORANGE text with larger font size.</p>
+    <!-- 
+        Multiple styles can be combined in the style attribute.
+        font-size controls the size of the text.
+    -->
+
+    <hr>
+
+    <!-- ========== FONT STYLING ========== -->
+    <h2 style="color: #34495e;">4. Font and Font Width (Weight)</h2>
+
+    <p style="font-family: 'Times New Roman', serif;">
+        This paragraph uses Times New Roman font.
+        <!-- 
+            font-family specifies the typeface.
+            Multiple fonts can be listed as fallbacks.
+        -->
+    </p>
+
+    <p style="font-family: 'Courier New', monospace; font-size: 16px;">
+        This uses Courier New font with 16px size.
+    </p>
+
+    <p style="font-family: Georgia, serif; font-size: 18px;">
+        This uses Georgia font with 18px size.
+    </p>
+
+    <!-- Font Weight (Width/Thickness) -->
+    <p style="font-weight: normal;">This text has normal font weight (400).</p>
+    <!-- 
+        font-weight controls the thickness/boldness of text.
+        Values: normal (400), bold (700), or numbers 100-900
+    -->
+
+    <p style="font-weight: bold;">This text has bold font weight (700).</p>
+
+    <p style="font-weight: 900;">This text has extra bold font weight (900).</p>
+
+    <p style="font-weight: 300;">This text has light font weight (300).</p>
+
+    <hr>
+
+    <!-- ========== BACKGROUND COLORS ========== -->
+    <h2 style="color: #34495e;">5. Background Colors</h2>
+
+    <p style="background-color: yellow; padding: 10px;">
+        This paragraph has a YELLOW background.
+        <!-- 
+            background-color sets the background color of an element.
+            padding adds space inside the element around the text.
+        -->
+    </p>
+
+    <p style="background-color: #ffcccc; padding: 10px; border: 2px solid red;">
+        This paragraph has a LIGHT PINK background with a red border.
+        <!-- 
+            border property adds a border around the element.
+            Format: width style color
+        -->
+    </p>
+
+    <p style="background-color: #333; color: white; padding: 15px;">
+        This paragraph has a DARK background with WHITE text for contrast.
+    </p>
+
+    <hr>
+
+    <!-- ========== PARAGRAPHS AND LINE BREAKS ========== -->
+    <h2 style="color: #34495e;">6. Paragraphs and Line Breaks</h2>
+
+    <p>
+        This is the first paragraph. Paragraphs automatically add spacing before and after.
+        The &lt;p&gt; tag is a block-level element, meaning it starts on a new line.
+    </p>
+    <!-- 
+        Each <p> tag creates a new paragraph with automatic spacing.
+    -->
+
+    <p>
+        This is the second paragraph.<br>
+        This is the same paragraph but on a new line using &lt;br&gt; tag.<br>
+        Another line within the same paragraph.<br>
+        Line breaks allow you to control line spacing without creating new paragraphs.
+    </p>
+
+    <p>
+        This paragraph demonstrates the difference:<br><br>
+        Double &lt;br&gt; tags create more space between lines.
+    </p>
+
+    <hr>
+
+    <!-- ========== HORIZONTAL LINES ========== -->
+    <h2 style="color: #34495e;">7. Horizontal Lines</h2>
+
+    <p>Horizontal lines separate content sections. Here are different styles:</p>
+
+    <hr>
+    <!-- Default horizontal line -->
+
+    <hr style="border: 1px solid red;">
+    <!-- Red horizontal line -->
+
+    <hr style="border: 3px dashed blue;">
+    <!-- Dashed blue horizontal line with 3px width -->
+
+    <hr style="border: 2px dotted green;">
+    <!-- Dotted green horizontal line -->
+
+    <hr style="height: 5px; background-color: #ff6600; border: none;">
+    <!-- Thick orange horizontal line -->
+
+    <!-- ========== MARQUEE TEXT ========== -->
+    <h2 style="color: #34495e;">8. Marquee Text (Scrolling Text)</h2>
+
+    <marquee>
+        This text scrolls from right to left (default behavior).
+    </marquee>
+    <!-- 
+        The <marquee> tag creates scrolling text.
+        NOTE: <marquee> is deprecated in HTML5 but still works in most browsers.
+        Modern websites use CSS animations instead.
+    -->
+
+    <marquee direction="right" style="background-color: #ffffcc; padding: 10px;">
+        This text scrolls from left to right.
+        <!-- 
+            direction attribute controls scroll direction.
+            Options: left (default), right, up, down
+        -->
+    </marquee>
+
+    <marquee behavior="alternate" style="background-color: #ccffcc; padding: 10px;">
+        This text bounces back and forth.
+        <!-- 
+            behavior attribute controls scroll behavior.
+            Options: scroll (default), slide, alternate
+        -->
+    </marquee>
+
+    <marquee scrollamount="2" style="background-color: #ccccff; padding: 10px;">
+        This text scrolls slowly (scrollamount=2).
+        <!-- 
+            scrollamount controls the speed of scrolling.
+            Lower values = slower, higher values = faster
+        -->
+    </marquee>
+
+    <marquee scrollamount="15" style="background-color: #ffccff; padding: 10px;">
+        This text scrolls quickly (scrollamount=15).
+    </marquee>
+
+    <hr style="margin-top: 30px; border: 2px solid #2c3e50;">
+
+    <!-- ========== SUMMARY SECTION ========== -->
+    <h2 style="color: #34495e; text-align: center;">Summary</h2>
+    <p style="text-align: center; font-size: 18px;">
+        <b>This document demonstrates all major HTML formatting elements:</b><br><br>
+        ✓ Headings (h1-h6)<br>
+        ✓ Bold (&lt;b&gt;, &lt;strong&gt;)<br>
+        ✓ Italics (&lt;i&gt;, &lt;em&gt;)<br>
+        ✓ Underline (&lt;u&gt;)<br>
+        ✓ Colors (text and background)<br>
+        ✓ Font families and sizes<br>
+        ✓ Font weight (thickness)<br>
+        ✓ Paragraphs (&lt;p&gt;)<br>
+        ✓ Line breaks (&lt;br&gt;)<br>
+        ✓ Horizontal lines (&lt;hr&gt;)<br>
+        ✓ Marquee text (scrolling)<br>
+    </p>
+
+    <!-- Footer -->
+    <p style="text-align: center; margin-top: 40px; color: #7f8c8d; font-size: 14px;">
+        <i>Created for HTML - Question 1</i>
+    </p>
+
+</body>
+<!-- The closing body tag marks the end of visible content -->
+
+</html>
+<!-- The closing html tag marks the end of the HTML document -->
