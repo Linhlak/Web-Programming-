@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<!-- 
+    DOCTYPE declaration defines the document type and HTML version.
+    HTML5 uses a simple <!DOCTYPE html> declaration.
+-->
+
+<html lang="en">
+<!-- 
+    The <html> tag is the root element that wraps all content.
+    'lang' attribute specifies the language of the document.
+-->
+
+<head>
+    <!-- 
+        The <head> section contains metadata about the document.
+        This information is not displayed on the page but is used by browsers and search engines.
+    -->
+    
+    <meta charset="UTF-8">
+    <!-- 
+        <meta charset> specifies the character encoding for the document.
+        UTF-8 supports all characters and symbols.
+    -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+        This meta tag makes the webpage responsive on different devices.
+    -->
+    
+    <title>HTML Images Tutorial - Question 3</title>
+    <!-- 
+        The <title> tag defines the title shown in the browser tab.
+    -->
+    
+    <style>
+        /* 
+            Internal CSS styles for better presentation.
+            The <style> tag contains CSS rules that apply to this document.
+        */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            padding: 20px;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 4px solid #3498db;
+            padding-bottom: 15px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        .example-box {
+            background-color: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .info-note {
+            background-color: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 15px;
+            margin: 15px 0;
+            color: #0c5460;
+        }
+        
+        /* Styling for the icon grid */
+        .icon-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .icon-item {
+            text-align: center;
+        }
+        
+        .icon-item img {
+            transition: transform 0.3s ease;
+        }
+        
+        .icon-item img:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Table styling */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 2px solid #34495e;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <!-- ========== HEADER WITH LOGO ========== -->
+        <div style="text-align: center; margin-bottom: 30px;">
+            <!-- 
+                This section demonstrates using an image as a logo.
+            -->
+            <img src="http://imgs.search.brave.com/zdI-tQWUiSfxVSyz-02lo6hwe6X2rVeZYYt4kijL9RY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM2/OTI3MTY5Ny92ZWN0/b3IvbG9nby1kZXNp/Z24td2l0aC1kb29y/LWFuZC13aW5kb3cu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PWpLY2t3RTBRQWRi/VzZxWU81MkZtMDBf/NkZJdGk2SGdhaVF6/U25Kdy01aUk9" 
+                 alt="Company Logo" 
+                 width="200" 
+                 height="80"
+                 style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <!-- 
+                The <img> tag embeds an image in the webpage.
+                
+                KEY ATTRIBUTES:
+                - src: Source URL of the image (required)
+                - alt: Alternative text shown if image can't load (required for accessibility)
+                - width: Width of the image in pixels
+                - height: Height of the image in pixels
+                - style: Inline CSS for styling
+                
+                NOTE: Always provide alt text for screen readers and accessibility.
+            -->
+        </div>
+        
+        <h1>HTML Images Tutorial - Comprehensive Guide</h1>
+        
+        <p style="text-align: center; font-size: 18px; color: #555;">
+            <strong>Learn how to use images in various ways on webpages</strong>
+        </p>
+
+        <hr style="border: 1px solid #ddd;">
+
+        <!-- ========== BASIC IMAGE USAGE ========== -->
+        <h2>1. Basic Image Display</h2>
+        
+        <div class="example-box">
+            <h3>Example 1: Simple Image with Alt Text</h3>
+            
+            <img src="https://via.placeholder.com/400x250/e74c3c/ffffff?text=Beautiful+Landscape" 
+                 alt="A beautiful landscape with mountains and sky"
+                 width="400"
+                 height="250">
+            <!-- 
+                This demonstrates a basic image.
+                The alt attribute describes the image for:
+                - Screen readers (accessibility)
+                - Users with slow connections
+                - When the image fails to load
+            -->
+            
+            <div class="info-note">
+                <strong>Best Practice:</strong> Always include descriptive alt text. 
+                It helps visually impaired users and improves SEO (Search Engine Optimization).
+            </div>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 2: Images with Different Sizes</h3>
+            
+            <p><strong>Original Size (400x250):</strong></p>
+            <img src="https://imgs.search.brave.com/PXTsyOhsdUquXQdSkb4CvFhEoY3FoHWod3zUEIH-8k4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjE0/OTUzMDk5My9waG90/by9kaWdpdGFsLWh1/bWFuLWhlYWQtY29u/Y2VwdC1mb3ItYWkt/bWV0YXZlcnNlLWFu/ZC1mYWNpYWwtcmVj/b2duaXRpb24tdGVj/aG5vbG9neS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9SWR1/T1JKVXMxYzFzMG0y/U1hRQU5zSzhJVWh0/bHo4UUFwc0x4TllP/WXJYUT0" 
+                 alt="Original size image"
+                 width="400"
+                 height="250">
+            
+            <p><strong>Smaller Size (200x125):</strong></p>
+            <img src="https://imgs.search.brave.com/PXTsyOhsdUquXQdSkb4CvFhEoY3FoHWod3zUEIH-8k4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjE0/OTUzMDk5My9waG90/by9kaWdpdGFsLWh1/bWFuLWhlYWQtY29u/Y2VwdC1mb3ItYWkt/bWV0YXZlcnNlLWFu/ZC1mYWNpYWwtcmVj/b2duaXRpb24tdGVj/aG5vbG9neS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9SWR1/T1JKVXMxYzFzMG0y/U1hRQU5zSzhJVWh0/bHo4UUFwc0x4TllP/WXJYUT0" 
+                 alt="Smaller size image"
+                 width="200"
+                 height="125">
+            <!-- 
+                You can resize images using width and height attributes.
+                The browser will scale the image accordingly.
+            -->
+            
+            <p><strong>Custom Size (300x100 - stretched):</strong></p>
+            <img src="https://imgs.search.brave.com/PXTsyOhsdUquXQdSkb4CvFhEoY3FoHWod3zUEIH-8k4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjE0/OTUzMDk5My9waG90/by9kaWdpdGFsLWh1/bWFuLWhlYWQtY29u/Y2VwdC1mb3ItYWkt/bWV0YXZlcnNlLWFu/ZC1mYWNpYWwtcmVj/b2duaXRpb24tdGVj/aG5vbG9neS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9SWR1/T1JKVXMxYzFzMG0y/U1hRQU5zSzhJVWh0/bHo4UUFwc0x4TllP/WXJYUT0" 
+                 alt="Stretched image"
+                 width="300"
+                 height="100">
+            <!-- 
+                WARNING: Changing aspect ratio can distort images.
+                Try to maintain the original width:height ratio.
+            -->
+        </div>
+
+        <hr style="border: 1px solid #ddd;">
+
+        <!-- ========== IMAGES AS LOGOS ========== -->
+        <h2>2. Images as Logos</h2>
+        
+        <div class="example-box">
+            <h3>Example: Company Branding with Multiple Logos</h3>
+            
+            <div style="background-color: #2c3e50; padding: 20px; text-align: center; border-radius: 8px;">
+                <img src="https://imgs.search.brave.com/zCSiDOV2zrB2DUFb6if7WB-QNyelM5Vngee0hKP2ebE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI3/Mjk2OTgxMi9waG90/by9saWdodC1idWxi/LXB1enpsZS1waWVj/ZXMtZm9ybWluZy10/aGUtd29yZC1icmFu/ZC1vbi1ibHVlLWJh/Y2tncm91bmQud2Vi/cD9hPTEmYj0xJnM9/NjEyeDYxMiZ3PTAm/az0yMCZjPWZiZzdt/MWtZY0FRUTRYSWpM/N1JpdUhnNHNseVlW/MTZjLTBoRnZjd2Ny/RUU9" 
+                     alt="Main Brand Logo"
+                     width="150"
+                     height="60"
+                     style="margin: 10px;">
+                <!-- 
+                    Logos are typically placed in headers or navigation bars.
+                    They should be sized appropriately and have transparent backgrounds.
+                -->
+                
+                <img src="https://imgs.search.brave.com/zCSiDOV2zrB2DUFb6if7WB-QNyelM5Vngee0hKP2ebE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI3/Mjk2OTgxMi9waG90/by9saWdodC1idWxi/LXB1enpsZS1waWVj/ZXMtZm9ybWluZy10/aGUtd29yZC1icmFu/ZC1vbi1ibHVlLWJh/Y2tncm91bmQud2Vi/cD9hPTEmYj0xJnM9/NjEyeDYxMiZ3PTAm/az0yMCZjPWZiZzdt/MWtZY0FRUTRYSWpM/N1JpdUhnNHNseVlW/MTZjLTBoRnZjd2Ny/RUU9" 
+                     alt="Brand Icon"
+                     width="60"
+                     height="60"
+                     style="margin: 10px; border-radius: 50%;">
+                <!-- 
+                    Circular logos/icons work well with border-radius: 50%
+                -->
+            </div>
+            
+            <div class="info-note">
+                <strong>Logo Best Practices:</strong>
+                <ul>
+                    <li>Use PNG format for logos with transparency</li>
+                    <li>Keep file size small for fast loading</li>
+                    <li>Provide both light and dark versions if needed</li>
+                    <li>Make logos clickable to link to homepage</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr style="border: 1px solid #ddd;">
+
+        <!-- ========== CLICKABLE IMAGES (IMAGE LINKS) ========== -->
+        <h2>3. Clickable Images (Image Links)</h2>
+        
+        <div class="example-box">
+            <h3>Example 1: Image as a Link</h3>
+            
+            <p>Click on the image below to visit a webpage:</p>
+            
+            <a href="https://www.google.com" target="_blank">
+                <!-- 
+                    The <a> tag creates a hyperlink.
+                    'href' specifies the destination URL.
+                    'target="_blank"' opens the link in a new tab.
+                -->
+                <img src="https://imgs.search.brave.com/zCSiDOV2zrB2DUFb6if7WB-QNyelM5Vngee0hKP2ebE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI3/Mjk2OTgxMi9waG90/by9saWdodC1idWxi/LXB1enpsZS1waWVj/ZXMtZm9ybWluZy10/aGUtd29yZC1icmFu/ZC1vbi1ibHVlLWJh/Y2tncm91bmQud2Vi/cD9hPTEmYj0xJnM9/NjEyeDYxMiZ3PTAm/az0yMCZjPWZiZzdt/MWtZY0FRUTRYSWpM/N1JpdUhnNHNseVlW/MTZjLTBoRnZjd2Ny/RUU9" 
+                     alt="Click to visit Example.com"
+                     width="300"
+                     height="200"
+                     style="border: 3px solid #1abc9c; cursor: pointer;">
+                <!-- 
+                    By wrapping an <img> tag inside an <a> tag,
+                    the image becomes clickable.
+                    cursor: pointer shows a hand cursor on hover.
+                -->
+            </a>
+            
+            <div class="info-note">
+                <strong>Note:</strong> When images are links, remove the default blue border by adding 
+                <code>style="border: none;"</code> or use CSS.
+            </div>
+        </div>
+
+        <div class="example-box">
+            <h3>Example 2: Clickable Icon Grid</h3>
+            
+            <p><strong>Social Media Icons (Clickable):</strong></p>
+            
+            <div class="icon-grid">
+                <div class="icon-item">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="https://imgs.search.brave.com/-5-9tTqcJ471choOF8MCxBFwFTQkVHiz564A1G6rlmM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzczL2I2/LzEwLzczYjYxMGNi/Y2QwMjk2OTM1YTU4/NDlkYmVjY2I3YmRi/LmpwZw" 
+                             alt="Facebook"
+                             width="60"
+                             height="60"
+                             style="border-radius: 10px;">
+                    </a>
+                    <p>Facebook</p>
+                </div>
+                
+                <div class="icon-item">
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="https://imgs.search.brave.com/_47QEAi8cqOAPmMDCV4XDJ0hb45th2neFe0TrItGulg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzQ5LzMvdHdpdHRl/ci14LWxvZ28tcG5n/X3NlZWtsb2dvLTQ5/MjM5NS5wbmc" 
+                             alt="Twitter"
+                             width="60"
+                             height="60"
+                             style="border-radius: 10px;">
+                    </a>
+                    <p>X</p>
+                </div>
+                
+                <div class="icon-item">
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="https://imgs.search.brave.com/GzXOOSaoMJIBJo3zMmXkxeBneK9u3sguBJqzldFmQt0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjMv/MjA1LzM0NC9zbWFs/bC9ibGluay1pbnN0/YWdyYW0tbG9nby1p/Y29uLW9uLXRyYW5z/cGFyZW50LWJhY2tn/cm91bmQtZnJlZS1w/bmcucG5n" 
+                             alt="Instagram"
+                             width="60"
+                             height="60"
+                             style="border-radius: 10px;">
+                    </a>
+                    <p>Instagram</p>
+                </div>
+                
+                <div class="icon-item">
+                    <a href="https://linkedin.com" target="_blank">
+                        <img src="https://imgs.search.brave.com/ZtKciIPFtc5ZJmg268AwqSgwqDgv_vXXQKT3XOxZ5f4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bG9nby53aW5lL2Ev/bG9nby9MaW5rZWRJ/bi9MaW5rZWRJbi1J/Y29uLUxvZ28ud2lu/ZS5zdmc" 
+                             alt="LinkedIn"
+                             width="60"
+                             height="60"
+                             style="border-radius: 10px;">
+                    </a>
+                    <p>LinkedIn</p>
+                </div>
+                
+                <div class="icon-item">
+                    <a href="https://youtube.com" target="_blank">
+                        <img src="https://imgs.search.brave.com/A3rXDz6wiCJwOaIV20kRbMWuu8IssdP0AVfkbFQyQuI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMS8w/NS8yMi8xMS8zOC95/dC02MjczMzY3XzEy/ODAucG5n" 
+                             alt="YouTube"
+                             width="60"
+                             height="60"
+                             style="border-radius: 10px;">
+                    </a>
+                    <p>YouTube</p>
+                </div>
+            </div>
+            <!-- 
+                This demonstrates using images as clickable social media icons.
+                Common use case for website footers and headers.
+            -->
+        </div>
+
+        <hr style="border: 1px solid #ddd;">
+
+        <!-- ========== IMAGES IN TABLES ========== -->
+        <h2>4. Images as Cell Data in Tables</h2>
+        
+        <div class="example-box">
+            <h3>Example: Product Catalog Table with Images</h3>
+            
+            <table>
+                <!-- 
+                    The <table> tag creates a table structure.
+                    Images can be placed inside table cells.
+                -->
+                <thead>
+                    <!-- 
+                        <thead> groups the header content in a table.
+                    -->
+                    <tr>
+                        <!-- 
+                            <tr> defines a table row.
+                        -->
+                        <th>Product Image</th>
+                        <!-- 
+                            <th> defines a header cell (bold and centered by default).
+                        -->
+                        <th>Product Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 
+                        <tbody> groups the body content in a table.
+                    -->
+                    <tr>
+                        <td style="text-align: center;">
+                            <!-- 
+                                <td> defines a standard data cell.
+                            -->
+                            <img src="https://imgs.search.brave.com/63Cw1T4s2SiMYppQSnhakya1gQ9N-RENa2jmhulrUzM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ3/NDc0NzU1MS9waG90/by9tb2Rlcm4tbGFw/dG9wLXdpdGgtYmxh/bmstYmxhY2stc2Ny/ZWVuLWlzb2xhdGVk/LW9uLXdoaXRlLWJh/Y2tncm91bmQtaGln/aC1hbmdsZS12aWV3/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz01eE5UWVY5VDBk/aUdueTMzNEVSZTVD/a1Bac0JpeHQ3NDZi/NHBaVGF1WmNJPQ" 
+                                 alt="Product 1"
+                                 width="80"
+                                 height="80"
+                                 style="border-radius: 5px;">
+                            <!-- 
+                                Images in table cells should be appropriately sized
+                                to maintain table structure.
+                            -->
+                        </td>
+                        <td><strong>Laptop Pro</strong></td>
+                        <td>High-performance laptop with 16GB RAM</td>
+                        <td>$1,299</td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://imgs.search.brave.com/o1Lsh9u7hVKXANRp9ziBRcWRVkimyAQl4KGdzy1MMQI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNjky/ODEwODM0L3Bob3Rv/L2EtbWFuLWhvbGRz/LXRoZS1ub2tpYS1z/bWFydHBob25lLW1v/ZGVsLTYtZHVyaW5n/LWEtcHJlc3MtY29u/ZmVyZW5jZS1vZi1m/aW5uaXNoLW1vYmls/ZS1waG9uZS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9T05f/MHVzQjExZWFDVHhp/SS12WXpFM09DaVFO/SGVZZE93cjFvUTJG/R3lBQT0" 
+                                 alt="Product 2"
+                                 width="80"
+                                 height="80"
+                                 style="border-radius: 5px;">
+                        </td>
+                        <td><strong>Smartphone X</strong></td>
+                        <td>Latest smartphone with advanced camera</td>
+                        <td>$899</td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="https://imgs.search.brave.com/iC_XNbSt_jORjiAe31IWri5D3MhFOrAZelLDbT45mOY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9oYW1t/ZXJvbmxpbmUuaW4v/Y2RuL3Nob3AvZmls/ZXMvSGFtbWVyQmx1/ZXRvb3RoSGVhZHBo/b25lcy53ZWJwP3Y9/MTY5NTI4NDgxNSZ3/aWR0aD0xMDgw" 
+                                 alt="Product 3"
+                                 width="80"
+                                 height="80"
+                                 style="border-radius: 5px;">
+                        </td>
+                        <td><strong>Wireless Headphones</strong></td>
+                        <td>Noise-cancelling over-ear headphones</td>
